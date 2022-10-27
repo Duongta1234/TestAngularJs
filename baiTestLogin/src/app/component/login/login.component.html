@@ -10,38 +10,38 @@
     <form id="loginForm" (ngSubmit)="onSubmit()" #loginForm="ngForm">
       <div class="flex flex-col gap-4 px-0 py-4">
         <div>
-          <label class="text-gray-700">Email</label>
-          <input class="py-2 pl-10 border border-gray-200 w-full" id="email" placeholder="email" name="email" type="email"  ngModel required minlength="6" #email="ngModel" />
+          <label class="text-gray-700 mb-16 ">Email</label>
+          <input class=" mt-3 rounded-lg py-2 pl-1 border border-gray-200 w-full" id="email" placeholder="email" name="email" type="email"  ngModel required minlength="6" #email="ngModel" />
           <small id="emailHid" *ngIf="!email?.valid && (email?.dirty || email?.touched)" class="text-red-500">Email bị trống
             hoặc không hợp lệ</small>
         </div>
         <div>
           <label class="text-gray-700">Mật khẩu</label>
 
-          <input class="py-2 pl-10 border border-gray-200 w-full" placeholder="Password" type="Mật khẩu"  name="password" ngModel required minlength="6"
+          <input class="mt-3 rounded-lg py-2 pl-1 border border-gray-200 w-full" placeholder="Mật khẩu" type="Mật khẩu"  name="password" ngModel required minlength="6"
           #password="ngModel" />
           <small *ngIf="!password?.valid &&(password?.dirty || password?.touched) " id="passwordHid"
           class="text-red-500">Mật khẩu bị trống hoặc không hợp lệ</small>
           <div class="w-full flex flex-row justify-start">
-            <a href="#">Quên mật khẩu</a>
+            <a class="mt-3" href="#">Quên mật khẩu</a>
           </div>
         </div>
         <div class="w-full flex flex-row justify-center">
           <button
-            class=" rounded-xl border bg-purple-700 border-purple-700  hover:bg-white  hover:text-indigo-500 duration-100 ease-in-out w-4/5 text-white p-0 flex flex-row justify-center items-center gap-1 h-10"
+            class="font-bold rounded-xl border bg-purple-900 border-purple-700  hover:bg-white  hover:text-indigo-500 duration-100 ease-in-out w-full text-white p-0 flex flex-row justify-center items-center gap-1 h-10"
             type="submit">
             Đăng nhập
           </button>
 
         </div>
         <div class="my-2 flex flex-row justify-center">
-          <span class="absolute bg-white px-4">or</span>
+          <span class="absolute bg-white px-4">hoặc</span>
           <div class="w-full bg-gray-200 mt-3" style="height: 1px"></div>
         </div>
 
-        <div class="w-full flex justify-around">
+        <div class="w-full flex justify-around flex-1">
           <button
-            class="rounded-2xl bg-blue-900 text-white w-2/5 p-2 flex flex-row justify-center gap-2 items-center hover:bg-red-600 duration-100 ease-in-out">
+            class="rounded-2xl bg-blue-900 text-white w-44 p-2 flex flex-row justify-center gap-2 items-center hover:bg-red-600 duration-100 ease-in-out">
             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true"
               role="img" class="w-5" preserveAspectRatio="xMidYMid meet" viewBox="0 0 1024 1024">
               <path
@@ -52,7 +52,7 @@
 
           </button>
           <button
-            class="border border-gray-500 rounded-2xl bg-white text-white w-2/5 p-2 flex flex-row justify-center gap-2 items-center hover:bg-blue-700 duration-100 ease-in-out">
+            class="border border-gray-500 rounded-2xl bg-white text-white w-44 p-2 flex flex-row justify-center gap-2 items-center hover:bg-blue-700 duration-100 ease-in-out">
             <img class="w-5" src="https://cdn-icons-png.flaticon.com/512/281/281764.png" alt="">
           </button>
 
